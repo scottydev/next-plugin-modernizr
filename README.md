@@ -65,7 +65,7 @@ module.exports = withModernizr(
 );
 ```
 
-To add custom tests to your project create a file such as `ModernizrTests.js` and import it in your `index.js` or a shared entry point.
+To add custom tests to your project create a file such as `ModernizrTests.js`:
 
 ```js
 import Modernizr from 'modernizr';
@@ -74,6 +74,12 @@ import Modernizr from 'modernizr';
 if (process.browser) {
   Modernizr.addTest('hastouch', 'ontouchstart' in window);
 }
+```
+ 
+Then simply import in your `index.js` or a shared entry point.
+
+```js
+import '../modules/ModernizrTests.js';
 ```
 
 From there you are able to import Modernizr in any component or module to use:
