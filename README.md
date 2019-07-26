@@ -1,7 +1,7 @@
 # next-plugin-modernizr
 
-Use [Modernizr](https://modernizr.com/) files with [Next.js](https://github.com/zeit/next.js).
-This uses the [webpack-modernizr-loader](https://www.npmjs.com/package/webpack-modernizr-loader) plugin.
+Use [Modernizr](https://modernizr.com/) browser feature checking with [Next.js](https://github.com/zeit/next.js).
+This utilizes the [webpack-modernizr-loader](https://www.npmjs.com/package/webpack-modernizr-loader) plugin.
 
 ## Installation
 
@@ -52,6 +52,7 @@ If you'd like to combine this with other plugins you can do it this way
 const withCSS = require('@zeit/next-css');
 const withSass = require('@zeit/next-sass');
 const withModernizr = require('next-plugin-modernizr');
+
 module.exports = withModernizr(
   withSass(
     withCSS({
@@ -64,6 +65,8 @@ module.exports = withModernizr(
   )
 );
 ```
+
+## Custom Modernizr Tests
 
 To add custom tests to your project create a file such as `ModernizrTests.js`:
 
